@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    stages{
+        stage('Build'){
+            steps{
+                echo "This is an build stage"
+                echo "Script executed from: ${PWD}"
+            }
+        }
+        stage('Test'){
+            steps{
+                    echo "This is an Test stage"
+                    sh 'ls -la'
+                echo "Script executed from: ${PWD}"
+            }
+        }
+        stage('Deploy'){
+            steps{
+                 echo "This is an Deploy stage"
+                   sh 'ls -la'
+                echo "Script executed from: ${PWD}"
+            }
+        }
+            }
+}
